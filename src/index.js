@@ -114,6 +114,14 @@ class Empresa {
         console.log(`Nome fantasia: ${this.nomeFantasia}`)
         console.log('--------------------')
 
+        if (this.telefones.size > 0) {
+            console.log("Telefones da empresa:")
+            this.telefones.forEach(telefone => {
+                console.log(`ddd: ${telefone.numero.substring(0, 2)} numero: ${telefone.numero}`)
+            })
+            console.log('--------------------')
+        }
+
         this.clientes.forEach(cliente => {
             console.log(`Nome: ${cliente.nome}`)
             console.log(`Estado: ${cliente.endereco.estado} cidade: ${cliente.endereco.cidade} rua: ${cliente.endereco.rua} numero: ${cliente.endereco.numero}`)
