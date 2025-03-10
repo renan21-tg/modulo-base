@@ -134,3 +134,5 @@ class Empresa {
         })
     }
 }
+
+export { Empresa, Cliente, Endereco, Telefone }
