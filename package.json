@@ -1,0 +1,21 @@
+{
+  "name": "modulo-base",
+  "version": "1.0.0",
+  "description": "Módulo para gerenciamento de clientes e empresas",
+  "main": "src/modulo.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renan21-tg/modulo-base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renan21-tg/modulo-base/issues"
+  },
+  "homepage": "https://github.com/renan21-tg/modulo-base#readme"
+}
