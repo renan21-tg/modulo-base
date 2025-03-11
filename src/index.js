@@ -111,28 +111,35 @@ class Empresa {
 
     detalhe() {
         console.log(`Razão Social: ${this.razaoSocial}`)
-        console.log(`Nome fantasia: ${this.nomeFantasia}`)
+        console.log(`Nome Fantasia: ${this.nomeFantasia}`)
+        console.log(`CNPJ: ${this.getCnpj()}`)
+        console.log(`Endereço: Estado: ${this.endereco.estado}, Cidade: ${this.endereco.cidade}, Rua: ${this.endereco.rua}, Número: ${this.endereco.numero}`)
         console.log('--------------------')
-
+    
         if (this.telefones.size > 0) {
             console.log("Telefones da empresa:")
             this.telefones.forEach(telefone => {
-                console.log(`ddd: ${telefone.numero.substring(0, 2)} numero: ${telefone.numero}`)
+                console.log(`DDD: ${telefone.ddd}, Número: ${telefone.numero}`)
             })
             console.log('--------------------')
         }
-
+    
+        console.log("Clientes cadastrados:")
         this.clientes.forEach(cliente => {
             console.log(`Nome: ${cliente.nome}`)
-            console.log(`Estado: ${cliente.endereco.estado} cidade: ${cliente.endereco.cidade} rua: ${cliente.endereco.rua} numero: ${cliente.endereco.numero}`)
+            console.log(`CPF: ${cliente.getCpf()}`)
+            console.log(`Endereço: Estado: ${cliente.endereco.estado}, Cidade: ${cliente.endereco.cidade}, Rua: ${cliente.endereco.rua}, Número: ${cliente.endereco.numero}`)
             
-            cliente.telefones.forEach(telefone => {
-                console.log(`ddd: ${telefone.numero.substring(0, 2)} numero: ${telefone.numero}`)
-            })
-
-            console.log('')
+            if (cliente.telefones.size > 0) {
+                console.log("Telefones do cliente:")
+                cliente.telefones.forEach(telefone => {
+                    console.log(`DDD: ${telefone.ddd}, Número: ${telefone.numero}`)
+                })
+            }
+    
+            console.log('--------------------')
         })
-    }
+    }    
 }
 
 export { Empresa, Cliente, Endereco, Telefone }
